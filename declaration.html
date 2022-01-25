@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déclaration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">POLICE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Acuueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="utilisateur.html">Déclaration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <!--999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999-->
+      <div class="jumbotron">
+        <h3>Les informations liées à la déclaration</h3>
+      </div>
+    <!--88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3 bloc">
+                <form action="declaration.php" method="post">
+                    <div class="form-group">
+                        <label for="propriete">Type de propriété :</label>
+                        <select class="form-select" aria-label="Default select example" name="propriete" id="propriete">
+                            <option selected>---Selectionnez le type de propriété---</option>
+                            <option value="Véhicule à moteur">Véhicule à moteur</option>
+                            <option value="Bicyclette">Bicyclette</option>
+                            <option value="Autres">Autres</option>        
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="propriete">La couleur :</label>
+                        <select class="form-select" aria-label="Default select example" name="couleur" id="couleur">
+                            <option selected>---Selectionnez la couleur de la propriété---</option>
+                            <option value="Blanc">Blanc</option>
+                            <option value="Rouge">Rouge</option>
+                            <option value="Noir">Noir</option>
+                            <option value="Vert">Vert</option> 
+                            <option value="Bleu">Bleu</option> 
+                            <option value="Gris">Gris</option> 
+                            <option value="Orange">Orange</option>      
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="marque">Marque : </label>
+                        <input type="text" class="form-control" id="marque" name="marque" placeholder="Marque">
+                    </div>
+                    <div class="form-group">
+                        <label for="matriculeV">Numéro de série ou Matricule : </label>
+                        <input type="text" class="form-control" id="matriculeV" name="matriculeV" placeholder="Numéro de série ou Matricule">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description générale : </label>
+                        <textarea  type="texte" class="form-control" id="description" name="description" placeholder="Description générale"></textarea>
+                    </div>
+                            <h3>Les détails relatifs au vol déclaré.</h3>
+                    <div class="form-group">
+                        <label for="lieu">Lieu : </label>
+                        <input type="text" class="form-control" id="lieu" name="lieu" placeholder="Le lieu de vol">
+                    </div>
+                    <div class="form-group">
+                        <label for="villeCommune">Ville ou commune : </label>
+                        <input type="text" class="form-control" id="villeCommune" name="villeCommune" placeholder="La ville ou la commune">
+                    </div>
+                    <div class="form-group">
+                        <label for="codePostal">Code postal : </label>
+                        <input type="text" class="form-control" pattern="[0-9]{5}" id="codePostal" name="codePostal" placeholder="Le code postal avec un maximun de 5 chiffres">
+                    </div>
+                    <div class="form-group">
+                        <label for="numRue">Numéro de la rue : </label>
+                        <input type="text" class="form-control" id="numRue" name="numRue" placeholder="Le numéro de la rue avec un maximun de 5 chiffres">
+                    </div><div class="form-group">
+                        <label for="dateVol">date de vol : </label>
+                        <input type="date" class="form-control" id="dateVol" name="dateVol" placeholder="la date de vol">
+                    </div>
+                    <!--<div class="form-group">
+                    <label for="IDUtilisateur">Identifiant de ll'utilisateur : </label>
+                        <input type="hidden" class="form-control" id="IDUtilisateur" name="IDUtilisateur" placeholder="Identifiant de ll'utilisateur">
+                        <div class="form-check">
+                    </div>-->
+                        <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            J'accepte les conditions d'utilisations
+                        </label>
+                    </div>
+                        <button type="submit" class="btn btn-success offset-4" name="envoyer">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

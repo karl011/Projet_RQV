@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisateur</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">POLICE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="declaration.html">Déclaration</a>
+                    </li>  
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Déconnexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <!--999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999-->
+      <div class="jumbotron">
+        <h3>Les information relatives à la victime ou au témoin</h3>
+      </div>
+    <!--88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <form action="utilisateur.php" method="post">
+                    <div class="form-group">
+                        <label for="civilite">Civilité :</label>
+                        <select class="form-select" aria-label="Default select example" name="civilite" id="civilite">
+                            <option selected>---Selectionnez votre civilité---</option>
+                            <option value="Monsieur">Monsieur</option>
+                            <option value="Madame">Madame</option>
+                            <option value="Mademoiselle">Mademoiselle</option>        
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nom : </label>
+                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenoms">Prénoms : </label>
+                        <input type="text" class="form-control" id="prenoms" name="prenoms" placeholder="Prénoms">
+                    </div>
+                    <div class="form-group">
+                        <label for="roleUtilisateur">Rôle de l'utilisateur : </label>
+                        <select class="form-select" aria-label="Default select example" name="roleUtilisateur" id="roleUtilisateur">
+                            <option selected>---Selectionnez votre rôle---</option>
+                            <option value="Victime">Victime</option>
+                            <option value="Témoin">Témoin</option>
+                            <option value="Les deux">Les deux</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numCNI">Numéro CNI : </label>
+                        <input type="text" class="form-control" id="numCNI" name="numCNI" placeholder="Le numéro de la carte CNI">
+                    </div>
+                    <div class="form-group">
+                        <label for="numTel">Numéro téléphone : </label>
+                        <input type="text" class="form-control" id="numTel" name="numTel" placeholder="Le numéro de téléphone">
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse">Adresse : </label>
+                        <input type="text" class="form-control" id="adresse" name="adresse" placeholder="Adresse">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            J'accepte les conditions d'utilisations
+                        </label>
+                    </div>
+                        <button type="submit" class="btn btn-success offset-4" name="envoyer">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
